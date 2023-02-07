@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 
 class PdfGeneratorController extends Controller
 {

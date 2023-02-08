@@ -1,5 +1,4 @@
-<html>
-<body>
-
-</body>
-</html>
+@foreach( $data  as $key => $value)
+    {{ $key }} = {{ $value }}
+   <br>
+@endforeach

@@ -11,11 +11,12 @@ class PdfGeneratorController extends Controller
     {
         $user = User::where ('id', $id)->first();
         $data = [
-            'name' =>$user->name,
+            'name' => $user->name,
             'surname' => $user->surname,
             'email' => $user->email
         ];
-        $pdf = PDF::loadView('resume', $data);
+
+        $pdf = Pdf::loadView('pdf', compact('data'));
         return $pdf->stream('resume.pdf');
     }
 }
